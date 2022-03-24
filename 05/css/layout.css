@@ -125,7 +125,7 @@ header.on .header_area {
     font-size: 14px;
     display: block;
     font-weight: 700;
-    transition: color 0.35;
+    transition: color 0.35s;
 }
 
 .header_area .left_wrap p {

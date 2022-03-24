@@ -407,7 +407,7 @@
   opacity: 0.3;
   transition: 0.35s;
   z-index: 1;
-  transition: opacity 0.35;
+  transition: opacity 0.35s;
 }
 
 .sc_about .img_box.box02 .img03 {
