@@ -1,0 +1,558 @@
+@import 'reset.css';
+@import 'common.css';
+
+/* 한글폰트 */
+
+@font-face {
+    font-family: 'NotoKR';
+    src: url('../font/notokr-light.eot'),
+        url('../font/notokr-light.eot?#iefix') format('embedded-opentype'),
+        url('../font/NotoKR-Light.woff') format('woff'),
+        url('../font/notokr-light.woff2') format('woff2'),
+        url('../font/NotoKR-Light.ttf') format('truetype'),
+        url('../font/NotoKR-Light.svg#NotoKR-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'NotoKR';
+    src: url('../font/notokr-regular.eot'),
+        url('../font/notokr-regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/NotoKR-Regular.woff') format('woff'),
+        url('../font/notokr-regular.woff2') format('woff2'),
+        url('../font/NotoKR-Regular.ttf') format('truetype'),
+        url('../font/NotoKR-Regular.svg#NotoKR-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NotoKR';
+    src: url('../font/notokr-medium.eot'),
+        url('../font/notokr-medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/NotoKR-Medium.woff') format('woff'),
+        url('../font/notokr-medium.woff2') format('woff2'),
+        url('../font/NotoKR-Medium.ttf') format('truetype'),
+        url('../font/NotoKR-Medium.svg#NotoKR-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'NotoKR';
+    src: url('../font/notokr-bold.eot'),
+        url('../font/notokr-bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/NotoKR-Bold.woff') format('woff'),
+        url('../font/notokr-bold.woff2') format('woff2'),
+        url('../font/NotoKR-Bold.ttf') format('truetype'),
+        url('../font/NotoKR-Bold.svg#NotoKR-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 영문폰트 */
+@font-face {
+    font-family: 'Derivia';
+    src: url('../font/Derivia-Regular.eot'),
+         url('../font/Derivia-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/Derivia-Regular.woff') format('woff'),
+         url('../font/Derivia-Regular.woff2') format('woff2'),
+         url('../font/Derivia-Regular.ttf') format('truetype'),
+         url('../font/Derivia-Regular.svg#Derivia-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Regular.eot'),
+         url('../font/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+         url('../font/Roboto-Regular.ttf') format('truetype'),
+         url('../font/Roboto-Regular.woff') format('woff'),
+         url('../font/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Medium.eot'),
+         url('../font/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../font/Roboto-Medium.svg#Roboto-Medium') format('svg'),
+         url('../font/Roboto-Medium.ttf') format('truetype'),
+         url('../font/Roboto-Medium.woff') format('woff'),
+         url('../font/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Light.eot'),
+         url('../font/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+         url('../font/Roboto-Light.svg#Roboto-Light') format('svg'),
+         url('../font/Roboto-Light.ttf') format('truetype'),
+         url('../font/Roboto-Light.woff') format('woff'),
+         url('../font/Roboto-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Bold.eot'),
+         url('../font/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/Roboto-Bold.svg#Roboto-Bold') format('svg'),
+         url('../font/Roboto-Bold.ttf') format('truetype'),
+         url('../font/Roboto-Bold.woff') format('woff'),
+         url('../font/Roboto-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  
+  
+  
+
+/* body */
+
+body {
+    min-width: 1200px;
+    font-family: 'NotoKR', sans-serif;
+    word-break: break-all;
+    background: #fff;
+}
+
+.inner {
+    margin: 0 auto;
+    max-width: 1470px;
+    padding: 0 50px;
+}
+
+
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    min-width: 1200px;
+    transition: 0.25s;
+}
+header.on h1 img {
+    transform: translateY(-101px);
+}
+header.on .logo_area {
+    height:  65px;
+    border-bottom: 1px solid hsla(0,0%,100%,.3);
+    background: rgba(255,255,255,0.7);
+}
+
+.logo_area {
+    height: 65px;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: 0.25s;
+    background: rgba(51, 51, 51, 0.089);
+    backdrop-filter: blur(16px);
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    padding: 22px 96px 0 96px;
+}
+
+.logo_area::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.logo_area h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 48px;
+    overflow: hidden;
+}
+
+.logo_area h1 a {
+    width: 100px;
+    display: block;
+}
+
+.logo_area h1 a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.25s;
+}
+.logo_area h1 a img:first-child {
+    margin-top: 15px;
+}
+.logo_area h1 a img:last-child {
+    margin: 75px auto;
+    width: 45px;
+}
+.logo_area .left_wrap {
+    float: left;
+}
+
+.logo_area .left_wrap .menu_btn {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 5px 20px;
+}
+
+
+.logo_area .left_wrap .menu_btn i {
+    width: 100%;
+    height: 1px;
+    background: rgba(0,30,49,.8);
+    display: block;
+    transition: 0.25s;
+}
+
+.logo_area .left_wrap .menu_btn i.top {
+    margin-top: 2px;
+}
+
+.logo_area .left_wrap .menu_btn i.bottom {
+    margin-top: 3px;
+}
+
+.logo_area .left_wrap a {
+    float: left;
+}
+
+.logo_area .right_wrap {
+    float: right;
+}
+
+.logo_area .right_wrap>a {
+    float: left;
+}
+
+.logo_area .right_wrap .sub {
+    float: left;
+    position: relative;
+}
+
+.logo_area .link01,
+.link02,
+.link03 {
+    font-size: 13px;
+    letter-spacing: normal;
+    display: block;
+    padding-top: 3px;
+    position: relative;
+    overflow: hidden;
+}
+.link01 span::before,
+.link02 span::before,
+.link03 span::before {
+    position: absolute;
+    content: attr(data-hover);
+    width: 100%;
+    top: 100%; left: 0;
+    padding-top:3px;
+    color: rgba(0,30,49,.8);
+}
+
+.link01 span,
+.link02 span,
+.link03 span {
+    transition: transform 0.2s;
+    position: relative;
+    display: block;
+}
+.link01:hover span,
+.link02:hover span,
+.link03:hover span {
+    transform: translateY(-15px);
+    display: inline-block;
+}
+
+.logo_area .link01,
+.link03 {
+    margin: 0 48px 0 30px;
+}
+
+.logo_area .sub {
+    transition: 0.25s;
+}
+
+.logo_area .sub:hover {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(26px);
+}
+
+.logo_area .sub span {
+    padding: 5px 20px;
+    font-size: 13px;
+}
+
+.logo_area .sub span::after {
+    content: '';
+    background: url(../images/icn_arrow.png) no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 8px;
+    transition: 0.15s;
+    transform: rotate(-90deg) scale(0.6);
+}
+
+.logo_area .sub:hover span::after {
+    transform: rotate(90deg) scale(0.6);
+}
+
+.sub a {
+    padding: 5px 20px;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Roboto',sans-serif;
+}
+
+.sub ul {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(26px);
+    width: 100%;
+}
+
+.logo_area .sub:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* header:menu */
+
+.gnb_area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.35s;
+}
+.gnb_area.on {
+    opacity: 1;
+    visibility: visible;
+}
+.gnb_area.on .shadow {
+    opacity: 1;
+    visibility: visible;
+}
+.gnb_area.on .wrap {
+    left: 0;
+}
+
+
+.gnb_area .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s;
+}
+
+.gnb_area .close {
+    position: absolute;
+    top: 52px;
+    left: 64px;
+    color: #fff;
+    z-index: 1;
+}
+
+.gnb_area .close a {
+    display: block;
+    position: relative;
+    padding:10px;
+}
+
+.gnb_area .close i {
+    width: 18px;
+    height: 1px;
+    position: absolute;
+    background: #fff;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.gnb_area .close span {
+    padding-left: 30px;
+    display: inline-block;
+}
+
+.gnb_area .close i.top {
+    transform: rotate(45deg);
+}
+
+.gnb_area .close i.bottom {
+    transform: rotate(-45deg);
+}
+
+.gnb_area .wrap {
+    height: 100%;
+}
+
+.gnb_area .wrap {
+    width: 25%;
+}
+
+.gnb_area .wrap nav {
+    backdrop-filter: blur(30px);
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,30,49,.8);
+    position: relative;
+}
+.gnb_area .wrap nav ul.gnb {
+    padding: 192px 0 192px 77px;
+    border-right: 1px solid hsla(0, 0%, 80%, 0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.gnb_area .wrap nav li a {
+    font-weight: 300;
+    font-size: 26px;
+    padding: 18px 0;
+    display: block;
+    color: #fff;
+}
+
+.gnb_area .menu_sub {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0,30,49,.8);
+    backdrop-filter: blur(30px);
+    z-index:-1;
+    overflow: hidden;
+    transition: 0.35s;
+    opacity: 0;
+    visibility: hidden;
+}
+.gnb_area .menu_sub.on {
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+}
+
+.gnb_area .menu_sub ul {
+    padding: 192px 0 192px 77px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    opacity: 0;
+    transition: 0.35s;
+    transition-delay: 0.35s;
+}
+
+.gnb_area .menu_sub ul.on {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* footer */
+
+footer {
+    background: rgba(0,30,49,.8);
+    backdrop-filter: blur(30px);
+    padding: 42px 0 44px;
+    font-weight: 300;
+    color: #fff;
+}
+
+footer .wrap {
+    overflow: hidden;
+}
+
+footer .wrap nav {
+    float: left;
+    width: 50%;
+}
+
+footer .wrap nav li {
+    float: left;
+    width: calc(100% / 2);
+    line-height: 43px;
+}
+
+footer .wrap nav li a {
+    display: block;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .wrap .contact {
+    float: left;
+    width: 30%;
+    padding-left: 100px;
+}
+
+footer .wrap .contact h3 {
+    font-family: 'Roboto', sans-serif;
+    line-height: 43px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+footer .wrap .contact address,
+footer .wrap .contact a,
+footer .wrap .tel a {
+    font-size: 14px;
+    line-height: 28px;
+    display: block;
+}
+
+footer .wrap .etc {
+    float: left;
+    width: 20%;
+}
+
+footer .wrap .etc .tel {
+   text-align: center;
+   margin-top: 25px;
+   
+}
+footer .wrap .etc h2 {
+    margin-top: 20px;
+}
+footer .wrap .etc h2 > a {
+    background: url(../images/f_logo.svg) no-repeat center center;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    background-size: contain;
+}

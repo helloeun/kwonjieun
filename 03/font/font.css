@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Derivia-Regular';
+  src: url('Derivia-Regular.eot');
+  src: url('Derivia-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Derivia-Regular.svg#Derivia-Regular') format('svg'),
+       url('Derivia-Regular.ttf') format('truetype'),
+       url('Derivia-Regular.woff') format('woff'),
+       url('Derivia-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,594 @@
+@import 'reset.css';
+@import 'common.css';
+
+/* 영문폰트 */
+@font-face {
+  font-family: 'domaine-text-web-light';
+  src: url('../font/domaine-text-web-light.woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+/* 한글폰트 */
+@font-face {
+  font-family: 'NotoKR';
+  src: url('../font/notokr-light.eot'),
+    url('../font/notokr-light.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoKR-Light.woff') format('woff'),
+    url('../font/notokr-light.woff2') format('woff2'),
+    url('../font/NotoKR-Light.ttf') format('truetype'),
+    url('../font/NotoKR-Light.svg#NotoKR-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'NotoKR';
+  src: url('../font/notokr-regular.eot'),
+    url('../font/notokr-regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoKR-Regular.woff') format('woff'),
+    url('../font/notokr-regular.woff2') format('woff2'),
+    url('../font/NotoKR-Regular.ttf') format('truetype'),
+    url('../font/NotoKR-Regular.svg#NotoKR-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoKR';
+  src: url('../font/notokr-medium.eot'),
+    url('../font/notokr-medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoKR-Medium.woff') format('woff'),
+    url('../font/notokr-medium.woff2') format('woff2'),
+    url('../font/NotoKR-Medium.ttf') format('truetype'),
+    url('../font/NotoKR-Medium.svg#NotoKR-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'NotoKR';
+  src: url('../font/notokr-bold.eot'),
+    url('../font/notokr-bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/NotoKR-Bold.woff') format('woff'),
+    url('../font/notokr-bold.woff2') format('woff2'),
+    url('../font/NotoKR-Bold.ttf') format('truetype'),
+    url('../font/NotoKR-Bold.svg#NotoKR-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'NotoKR', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-weight: 400;
+}
+
+/* cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.09567577030812324) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: 100;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/*header*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 64px;
+  box-sizing: border-box;
+  z-index: 100;
+  transition: 0.35s;
+}
+
+header.on {
+  background-color: #fafafa;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+header.on .header_area {
+  align-items: center;
+}
+
+header.on .sub {
+  display: none;
+}
+
+header.on .m_btn a {
+  color: #3a3e4b;
+}
+
+header.on .right_wrap .make {
+  border: 1px solid rgba(0, 0, 0, .32);
+}
+
+header.on .right_wrap .make:hover {
+  background: #1a1b20;
+  color: #fff;
+}
+
+header.on h1 a {
+  background: url(../images/prada-logo-on.png) no-repeat center center;
+  background-size: cover;
+}
+
+header.on .header_area .left_wrap a,
+header.on .header_area .right_wrap a {
+  color: #1a1b20;
+}
+
+.header_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 74px;
+  transition: 0.35s;
+}
+
+.header_area a {
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.left_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.m_menu_wrap,
+.m_btn {
+  display: none;
+}
+
+.menu_wrap ul {
+  display: flex;
+}
+
+.menu_wrap ul li:last-child a {
+  font-family: 'domaine-text-web-light', sans-serif;
+}
+
+.menu_wrap ul li a {
+  padding-right: 48px;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+header h1 {
+  width: 126px;
+  height: 20px;
+  margin-right: 120px;
+}
+
+header h1 a {
+  height: 100%;
+  display: block;
+  background: url(../images/prada-logo.png) no-repeat center center;
+  background-size: cover;
+}
+
+.right_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.right_wrap .sub {
+  padding-right: 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.right_wrap .sub a {
+  display: block;
+  padding: 7.5px 0;
+  font-size: 11px;
+  font-family: 'domaine-text-web-light', sans-serif;
+}
+
+.right_wrap .sub .box {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.right_wrap .sub:hover .box {
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.make {
+  text-align: center;
+  box-sizing: border-box;
+  width: 183px;
+  padding: 13px 0;
+  border: 1px solid hsla(0, 0%, 100%, 0.32);
+  transition: 0.35s;
+  font-size: 11px;
+  font-family: 'domaine-text-web-light', sans-serif;
+}
+
+.make:hover {
+  background: #fff;
+  color: #3a3e4b;
+}
+
+
+
+/*footer*/
+footer {
+  color: #fff;
+  position: relative;
+  background-color: #000;
+  box-sizing: border-box;
+  padding: 170px 50px;
+}
+
+footer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/footerbg01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.1;
+}
+
+footer .wrap {
+  position: relative;
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+footer .wrap .title {
+  color: #fff;
+}
+
+footer .wrap .text {
+  color: hsla(0, 0%, 100%, 0.6);
+  max-width: 390px;
+  margin-bottom: 63px;
+}
+
+footer .make {
+  display: inline-block;
+  color: #3a3e4b;
+  background: #fff;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  border: 1px solid #fff;
+  transition: 0.35s;
+}
+
+footer .make:hover {
+  background: transparent;
+  color: #fff;
+}
+
+footer .contact {
+  display: flex;
+  margin-bottom: 63px;
+
+}
+
+footer .contact>div {
+  margin-right: 102px;
+}
+
+footer .contact em {
+  margin-bottom: 15px;
+  display: block;
+  color: #818181;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+footer .contact a,
+footer .contact span,
+footer .contact p {
+  display: block;
+  letter-spacing: 0.66px;
+  color: #818181;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 300;
+  line-height: 18px;
+  font-size: 13px;
+}
+
+
+
+footer .copy {
+  position: absolute;
+  left: -190px;
+  bottom: -140px;
+  color: #818181;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+footer .sub {
+  font-size: 11px;
+  letter-spacing: 0.66px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+footer .sub ul {
+  display: flex;
+}
+
+footer .sub>a {
+  display: block;
+  margin-bottom: 14px;
+}
+
+footer .sub li {
+  margin-right: 16px;
+}
+
+.label.contacts {
+  position: absolute;
+  top: 0;
+  left: -190px;
+  z-index: 22;
+}
+
+/* motion */
+
+.motion_y {
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 1500px) {
+  header h1 {
+    margin-right: 60px;
+  }
+
+  header h1 a {
+    background-size: contain;
+  }
+
+  .menu_wrap ul li a {
+    padding-right: 38px;
+    box-sizing: border-box;
+  }
+
+  .right_wrap .sub {
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+
+  .make {
+    width: auto;
+    padding: 13px 10px;
+    box-sizing: border-box;
+  }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+  header h1 {
+    margin-right: 25px;
+  }
+
+  header h1 a {
+    background-size: contain;
+  }
+
+  .menu_wrap ul li a {
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+
+  .right_wrap .sub {
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+
+  .make {
+    width: auto;
+    padding: 13px 5px;
+    box-sizing: border-box;
+  }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    margin-right: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  header h1 a {
+    background-size: contain;
+  }
+
+  .menu_wrap,
+  .right_wrap {
+    display: none;
+  }
+
+  .m_btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+  }
+
+  .m_btn i {
+    background: rgb(241, 241, 241);
+    height: 2px;
+    position: absolute;
+    right: 0;
+    border-radius: 2px;
+  }
+
+  .m_btn i.top {
+    width: 80%;
+    margin-top: 9px;
+  }
+
+  .m_btn i.bottom {
+    width: 50%;
+    margin-top: 18px;
+  }
+
+  header.on .m_btn i {
+    background: #3a3e4b;
+  }
+
+  .m_menu_wrap {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #292929;
+    padding: 0 50px;
+    box-sizing: border-box;
+    transition: 0.35s;
+    visibility: hidden;
+  }
+
+  .m_menu_wrap.on {
+    left: 0;
+    visibility: visible;
+  }
+
+
+  .m_menu_wrap::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: hsla(0, 0%, 100%, 0.32);
+  }
+
+  .m_menu_wrap .close {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .m_menu_wrap .close i {
+    width: 25px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #fff;
+  }
+
+  .m_menu_wrap .close i.top {
+    transform: rotate(45deg);
+  }
+
+  .m_menu_wrap .close i.bottom {
+    transform: rotate(-45deg);
+  }
+
+  .m_menu_wrap nav {
+    margin-top: 90px;
+  }
+
+  .m_menu_wrap a {
+    font-family: 'domaine-text-web-light', sans-serif;
+    display: block;
+    line-height: 2.5em;
+    font-size: 16px;
+  }
+
+  .m_menu_wrap .m_sub .make {
+    margin: 60px 0;
+  }
+
+  .make {
+    width: auto;
+    padding: 13px 5px;
+    box-sizing: border-box;
+  }
+
+  footer {
+    padding: 100px 20px;
+  }
+
+  footer .wrap {
+    flex-direction: column;
+  }
+
+  footer .contact>div {
+    margin: 0;
+    text-align: right;
+  }
+
+  footer .contact {
+    display: block;
+  }
+
+  footer .wrap .text,
+  footer .contact a,
+  footer .contact span,
+  footer .contact p {
+    font-size: 12px;
+  }
+
+  footer .make {
+    display: none;
+  }
+
+  footer .copy {
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+
+}

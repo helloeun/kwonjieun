@@ -1,0 +1,34 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0 0 0 0);
+}
+
+.sp_bg, header .header_link a.ico_home::after,
+header .gnb_area ul.gnb li .mail::before,
+header .gnb_area ul.gnb li .more::after,
+.left_wrap #sc_news .news_title .title a em::after,
+.left_wrap #sc_news .news_list .news_stand .stand_left .title::before,
+.left_wrap #sc_news .news_list .news_stand .stand_left .title::after,
+header .gnb_area ul.gnb li .tv.green::before,
+#sc_cast .cast_title .title_right .set::before,
+.right_wrap #sc_login .login_link .link_left .link_id::before,
+.right_wrap #sc_login .login_link .link_right::before,
+footer .notice_area .service::after,
+header .gnb_area .weather .left span.exp::before,
+header .gnb_area .weather .right span.exp::before {
+    background-image: url(../images/sp_bg.png);
+    background-repeat: no-repeat;
+    background-size: 444px;
+}
+
+
+.sp_bg2,.right_wrap #sc_shop .shop_title .title::before,
+.right_wrap #sc_shop .shop_title .title::after {
+    background-image: url(../images/sp_bg2.png);
+    background-repeat: no-repeat;
+    background-size: 107px;
+}
